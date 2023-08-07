@@ -1,0 +1,1151 @@
+:root {
+    /** colours **/
+    --yellow:           #FED766; 
+    --lt-seafoam-green: #ecf9f6;
+    --seafoam-green:    #43C6AC;
+    --md-blue:          #191654;
+    --dk-blue:          #0C0B2A;
+    --blue-grey:        #6B717E;
+
+    /** typography **/
+    --headings:'Monoton', cursive;
+    --body: 'Rubik', sans-serif;
+}
+
+.sr-only {
+    position: absolute;
+    top: 0;
+    left: -9999999px;
+    width: 0.1rem;
+    height: 0.1rem;
+    visibility: hidden;
+}
+
+body {
+    font-family: var(--body);
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+main svg {
+    width: 2.25rem;
+    padding-left: 0.5rem;
+}
+
+header svg {
+    width: 13rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 3%;
+}
+
+header {
+    background-color: var(--lt-seafoam-green);
+    position: sticky;
+    top: 0;
+}
+
+
+.nav-toggle { 
+    cursor: pointer;
+    
+}
+
+.nav-toggle span {
+    display: flex;
+    background-color: var(--md-blue);
+    height: 0.35rem;
+    width: 3rem;
+    margin-bottom: 0.35rem;
+    border-radius: 10rem;
+} 
+
+header nav {  
+    position: absolute;  
+    background-color: var(--lt-seafoam-green);       
+    width: 100vw;       
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+header {
+    box-shadow: 1px 2px 6px #e2e2e2;   
+}
+
+.show-nav {
+    max-height: 40rem;
+    box-shadow: inset -1px 2px 6px #e2e2e2;    
+}
+
+.menu {
+    padding: 1.75rem 0;
+
+}
+
+
+.menu li {
+    padding: 1rem;
+    border-bottom: 2px solid var(--seafoam-green);
+}
+
+.menu a {
+    color: var(--md-blue);
+    text-transform: uppercase;
+    font-size: 1.875rem;
+}
+
+.menu a:hover, 
+.menu a:active {
+    color: var(--seafoam-green);
+}
+
+header input {
+    display: inline-block;
+    color: var(--md-blue);
+    cursor: pointer;
+    border: none;
+    border: 2px solid var(--md-blue);
+    border-radius: 10px;
+    background: var(--lt-seafoam-green) url(../img/svg/search-icon.svg) no-repeat;
+    background-position: center left 10px;
+    background-size: 21px;
+    margin: 0 0.75rem 3rem 0.75rem;
+    padding: 0.5rem 3.5rem 0.25rem 2.5rem;
+}
+
+header input::placeholder {
+    color: var(--md-blue);
+    font-size: 1.125rem;
+}
+
+.intro h2 {
+    font-family: var(--headings);
+    color: var(--lt-seafoam-green);
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.index .intro h2 {
+    padding-bottom: 0.75rem;
+    max-width: 670px;
+}
+
+.work h2, .services h2, .four-tile h2, .inspired h2, footer h2, .help h2, .parallax-image h2 {
+    display: inline-block;
+    font-family: var(--headings);
+    font-size: 2.25rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.2;
+    border-bottom: 2px solid var(--seafoam-green);
+    padding-bottom: 0.5rem;
+}
+
+.intro {
+    background: linear-gradient(45deg,
+    rgba(25,22,84) 0%,
+    rgba(65,193,168) 100%
+    );
+    color: var(--lt-seafoam-green);
+    font-weight: 300;
+    }
+
+.intro div {
+    padding: 4.25rem 3%;
+}
+    
+.intro a:first-of-type {
+    background-color: var(--seafoam-green);
+    color: var(--md-blue);
+    text-align: center;
+    font-size: 1.3125rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 3.5rem 0 1.5rem 0;
+    padding: 1rem 2.1rem;
+}
+
+.intro a:first-of-type:hover,
+.intro a:first-of-type:active {
+    background-color: var(--lt-seafoam-green);
+    color: var(--seafoam-green);
+}
+
+.intro a:last-of-type {
+    color: var(--seafoam-green);
+    text-align: center;
+    font-size: 1.3125rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+    border: 3px solid var(--seafoam-green);
+    border-radius: 5px;
+    padding: 0.85rem 4.25rem;
+    }
+
+.intro a:last-of-type:hover,
+.intro a:last-of-type:active {
+    background-color: var(--seafoam-green);
+    color: var(--lt-seafoam-green);
+}
+
+.work-intro {
+    padding: 4rem 3% 3rem 3%;
+}
+
+.work h2 {
+    color: var(--md-blue);
+}
+
+.work-intro p {
+    color: var(--md-blue);
+    padding-top: 1.5rem;
+}
+
+.img-tiles {
+    overflow: scroll;
+    height: 615px;
+}
+
+
+.img-tiles > div {
+    display: flex;
+}
+
+.tile-1 {
+    background: url(../img/very-good-creative-branding.webp) center / cover no-repeat;
+    height: 240px;
+    width: 293px;
+}
+
+.tile-2 {
+    background: url(../img/le-buzz-website.webp) center / cover no-repeat;
+    height: 240px;
+    width: 293px;
+}
+
+.tile-3 {
+    background: url(../img/binance-branding.webp) center / cover no-repeat;
+    height: 240px;
+    width: 293px;
+}
+
+.tile-4 {
+    background: url(../img/digipool-app-dev.webp) center / cover no-repeat;
+    height: 240px;
+    width: 293px;
+}
+
+.tile-5 {
+    background: url(../img/daniel-korpai.webp) center / cover no-repeat;
+    height: 240px;
+    width: 293px;
+}
+
+.tile-6 {
+    background: url(../img/signmud-branding.webp) center / cover no-repeat;
+    height: 240px;
+    width: 293px;
+}
+
+.tile-7 {
+    background: url(../img/ag-photography-digital-marketing.webp) center / cover no-repeat;
+    height: 240px;
+    width: 293px;
+}
+
+.tile-8 {
+    background: url(../img/apollo-holdings-ux.webp) center / cover no-repeat;
+    height: 240px;
+    width: 293px;
+}
+
+.img-tiles div p:first-of-type {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.2;
+    font-weight: 400;
+    padding: 0.5rem 0 0 1rem;
+}
+
+.img-tiles div p:last-of-type {
+    font-size: 1.3125rem;
+    line-height: 1.2;
+    padding: 0 0 0.5rem 1rem;
+}
+
+.img-tiles-1 div:nth-child(even) {
+    background-color: var(--seafoam-green);
+    color: var(--md-blue);
+}
+
+.img-tiles-1 div:nth-child(odd) {
+    background-color: var(--md-blue);
+    color: var(--lt-seafoam-green);
+}
+
+.img-tiles-2 div:nth-child(odd) {
+    background-color: var(--seafoam-green);
+    color: var(--md-blue);
+}
+
+.img-tiles-2 div:nth-child(even) {
+    background-color: var(--md-blue);
+    color: var(--lt-seafoam-green);
+}
+
+.view-work {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 3%;
+}
+
+.view-work a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--md-blue);
+    font-weight: 400;
+    font-size: 1.3125rem;
+    text-transform: uppercase;
+    border: 3px solid var(--md-blue);
+    border-radius: 4px;
+    padding: 1.25rem 0.75rem;
+    margin-top: 3rem;
+}
+
+.services a, .who a, .learn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--md-blue);
+    font-weight: 400;
+    font-size: 1.3125rem;
+    text-transform: uppercase;
+    border: 3px solid var(--md-blue);
+    border-radius: 4px;
+    padding: 1.25rem 0;
+    max-width: 370px;
+    margin-top: 3rem;
+}
+
+.work a:hover, .services a:hover, .who a:hover,
+.work a:active, .services a:active, .who a:active {
+    background-color: var(--md-blue);
+    color: var(--lt-seafoam-green);
+}
+
+.services {
+    color: var(--md-blue);
+    padding: 4rem 3% 4.75rem 3%;
+}
+
+.services h2 {
+    margin-bottom: 1.5rem;
+    color: var(--md-blue);
+}
+
+.index h3 {
+    color: var(--seafoam-green);
+    font-weight: 300;
+    font-size: 1.875rem;
+    margin: 1.25rem 0 1rem 0;
+    line-height: 1.2;
+}
+
+.services-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services-img >div {
+    margin-top: 3.5rem;
+}
+
+
+.services-img-1 {
+    background: url(../img/branding.webp) center / cover no-repeat;
+    min-height: 220px;
+    border-radius: 5px;
+}
+
+.services-img-2 {
+    background: url(../img/web-design-process.webp) center / cover no-repeat;
+    min-height: 220px;
+    border-radius: 5px;
+}
+
+.services-img-3 {
+    background: url(../img/app-design.webp) center / cover no-repeat;
+    min-height: 220px;
+    border-radius: 5px;
+}
+
+.services-img-4 {
+    background: url(../img/digital-marketing.webp) center / cover no-repeat;
+    min-height: 220px;
+    border-radius: 5px;
+}
+
+.who {
+    background-color: var(--seafoam-green); 
+}
+
+.who div {
+    padding: 4rem 3% 4.75rem 3%;
+}
+
+.who h2 {
+    color: var(--md-blue);
+    border-bottom: 1px solid var(--lt-seafoam-green);
+}
+
+.who p {
+    padding-top: 1.5rem;
+}
+
+.four-tile-img {
+    background: url(../img/creative-studio-ux-team.webp) center / cover no-repeat;
+    min-height: 265px;
+}
+
+.learn {
+    background-color: var(--md-blue);
+    padding: 4.25rem 3%;
+}
+
+.learn h2 {
+    color: var(--lt-seafoam-green);
+}
+
+.learn a {
+    color: var(--lt-seafoam-green);
+    border: 3px solid var(--lt-seafoam-green);
+}
+
+.learn a:hover,
+.learn a:active {
+    color: var(--md-blue);
+    background-color: var(--lt-seafoam-green);
+}
+
+.learn p {
+    color: var(--lt-seafoam-green);
+    padding-top: 1.5rem;
+}
+
+.experience {
+    padding: 3.5rem 3% 5rem 3%;
+}
+
+.experience-img {
+    background: url(../img/web-design.webp) center / cover no-repeat;
+    border-radius: 5px;
+    height: 250px;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.experience p {
+    padding-bottom: 2.75rem;
+}
+
+.experience a {
+    color: var(--md-blue);
+    font-size: 1.3125rem;
+    border-bottom: 1px solid var(--seafoam-green);
+}
+
+.experience a:hover,
+.experience a:active {
+    color: var(--seafoam-green);
+}
+
+.inspired {
+    background: url(../img/cta-banner.webp) center / cover no-repeat;
+    text-align: center;
+    padding: 8rem 3%;
+    color: var(--lt-seafoam-green);
+}
+
+.inspired h2 {
+    border: none;
+}
+
+.inspired p {
+    padding-top: 1.5rem;
+    font-weight: 300;
+}
+
+.inspired a {
+    background-color: var(--seafoam-green);
+    color: var(--md-blue);
+    font-weight: 400;
+    font-size: 1.3125rem;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+} 
+
+.inspired a:hover,
+.inspired a:active {
+    background-color: var(--lt-seafoam-green);
+    color: var(--seafoam-green);
+}
+
+footer {
+    background-color: var(--md-blue);
+    color: var(--lt-seafoam-green);
+    padding-top: 2rem;
+}
+
+footer h2 {
+    font-size: 1.75rem;
+    padding: 2.75rem 0 1.75rem 0;
+    border: none;
+}
+
+.footer-nav {
+    padding: 0 3% 5rem 3%;
+}
+
+.address{
+    padding-bottom: 2.75rem;
+}
+
+.address a {
+    display: inline-block;
+    padding-top: 0.5rem;
+}
+
+.quicklinks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quicklinks div {
+    width: 50%;
+}
+
+.quicklinks li {
+    padding-bottom: 0.5rem;
+}
+
+.quicklinks a, .footer-nav a{
+    color: var(--lt-seafoam-green);
+}
+
+.quicklinks a:hover, .footer-nav a:hover,
+.quicklinks a:active, .footer-nav a:active {
+    color: var(--seafoam-green);
+}
+
+.newsletter input {
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 5rem 1rem 1rem;
+}
+
+.newsletter input::placeholder {
+    color: var(--md-blue);
+    font-weight: 400;
+}
+
+.newsletter button {
+    background-color: var(--seafoam-green);
+    color: var(--md-blue);
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    margin: 0.65rem 0 3rem 0;
+    padding: 1rem 4.67rem;
+    cursor: pointer;
+}
+
+.newsletter button:hover,
+.newsletter button:active {
+    background-color: var(--lt-seafoam-green);
+    color: var(--seafoam-green);
+}
+
+.social-container {
+    background-color: var(--dk-blue);
+}
+
+.social {
+    padding: 1rem 3%;
+    font-size: 1rem;
+}
+
+.social svg {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: var(--lt-seafoam-green);
+}
+
+.social svg:hover {
+    fill: var(--seafoam-green);
+}
+
+.social p {
+    font-size: 1rem;
+}
+
+.social a {
+    color: var(--lt-seafoam-green);
+}
+
+.social a:hover,
+.social a:hover {
+    color: var(--seafoam-green);
+}
+
+/* Contact Us Page */
+
+.contact .intro h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.help h2, .parallax-image h2 {
+    padding-bottom: 1rem;
+}
+
+.contact h3 {
+    color: var(--md-blue);
+    font-size: 1.875rem;
+    font-weight: 300;
+    padding: 2rem 0 1rem 0;
+}
+
+.help {
+    padding: 5rem 3%;
+}
+
+.help h2 {
+    color: var(--md-blue);
+    margin-bottom: 1.5rem;
+    max-width: 390px;
+}
+
+.help P {
+    color: var(--md-blue);
+}
+
+.help .email {
+    color: var(--seafoam-green);
+    font-size: 1.3125rem;
+    font-weight: bold;
+}
+
+.contact .address h4 {
+    color: var(--dk-blue);
+
+}
+
+.contact .address {
+    padding-bottom: 1rem;
+}
+
+.contact .address a {
+    color: var(--md-blue);
+}
+
+.parallax-image {
+    background: url(../img/do-something-great-parallax.webp) center / cover no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.parallax-image div {
+    padding: 8rem 3%;
+}
+
+.parallax-image h2 {
+    color: var(--lt-seafoam-green);
+    max-width: 650px;
+}
+
+.parallax-image p {
+    color: var(--lt-seafoam-green);
+    padding-top: 2rem;
+    max-width: 610px;
+}
+
+.contact form {
+    padding: 5rem 3%;
+}
+
+.contact form input {
+    border: 3px solid var(--seafoam-green);
+    border-radius: 5px;
+    display: block;
+}
+
+.contact form label {
+    text-transform: uppercase;
+    color: var(--dk-blue);
+}
+
+.form-contact input {
+    width: 100%;
+    max-width: 520px;
+    margin-top: 0.25rem;
+    margin-bottom: 2rem;
+    height: 3.75rem;
+}
+
+.form-contact input:required:valid {
+    background-color: rgb(238, 248, 255);
+}
+
+.contact .checkbox-form p {
+    font-size: 1.875rem;
+    color: var(--md-blue);
+    padding-top: 1rem;
+}
+
+.contact input[type="checkbox"] {
+    display: inline;
+}
+
+.checkboxes div {
+    padding-top: 1.25rem;
+}
+
+.budget  {
+    padding: 3rem 0;
+}
+
+.contact .budget label {
+    display: flex;
+    font-size: 1.875rem;
+    text-transform: none;
+    color: var(--md-blue);
+}
+
+.budget select {
+    border: 3px solid var(--seafoam-green);
+    border-radius: 5px;
+    padding: 1rem 11.25rem 1rem 0.5rem;
+    width: 100%;
+    max-width: 550px;
+}
+
+.message p:first-of-type {
+    font-size: 1.875rem;
+    line-height: 1.2;
+    padding-bottom: 2rem;
+    color: var(--md-blue);
+}
+
+.contact .message p:last-of-type {
+    font-size: 1rem;
+    color: var(--md-blue);
+}
+
+.contact form textarea {
+    border: 3px solid var(--seafoam-green);
+    border-radius: 5px;
+    resize: vertical;
+    height: 225px;
+    width: 100%;
+    padding: 0.5rem;
+    max-width: 550px;
+}
+
+.contact textarea::placeholder {
+    font-size: 1rem;
+    color: black;
+}
+
+.contact button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: var(--md-blue);
+    font-weight: 400;
+    font-size: 1.3125rem;
+    text-transform: uppercase;
+    border: 3px solid var(--md-blue);
+    border-radius: 4px;
+    padding: 1.25rem 0.35rem;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 370px;
+    cursor: pointer;
+}
+
+.contact button:hover, 
+.contact button:active {
+    background-color: var(--md-blue);
+    color: var(--lt-seafoam-green);
+}
+
+
+@media screen and (min-width: 760px) {
+
+    .index .intro h2, .contact .intro h2 {
+        font-size: 4rem;
+    }
+
+    .index .intro div {
+        padding: 8.5rem 3%;
+    }
+
+    .index .intro p {
+        max-width: 670px;
+    }
+
+    .intro a:first-of-type {
+        margin-right: 2rem;
+    }
+
+    .work h2, .services h2, .four-tile h2, .inspired h2 {
+        font-size: 3rem;
+        padding-top: 5rem;
+    }
+
+    .help h2, .parallax-image h2 {
+        font-size: 3rem;
+    }
+
+    .work-intro p {
+        max-width: 630px;
+    }
+
+    .view-work a {
+        width: 370px;
+    }
+
+    .index h3, .contact h3 {
+        font-size: 2.25rem;
+    }
+
+    .services {
+        padding-bottom: 10rem;
+    }
+
+    .services-img >div {
+        width: 48%;
+    }
+    
+    .who {
+        padding-bottom: 6rem;
+    }
+
+    .four-tile-img {
+        height: 640px;
+    }
+
+    .learn {
+        padding-bottom: 5.5rem;
+    }    
+
+    .learn p {
+        width: 400px
+    }
+
+    .experience {
+        display: flex;
+        padding: 5rem 3% 10rem 3%;
+    }
+
+    .experience h3 {
+        margin-top: 0;
+    }
+
+    .experience-img {
+        margin-bottom: 0;
+        height: 310px;
+        margin-right: 2rem;
+    }
+
+    .inspired {
+        padding: 3rem 3% 7rem 3%;
+    }
+
+    .office-links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .office-links >div {
+        width: 48%;
+    }
+
+    .newsletter div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+
+    .newsletter input {
+        border-radius: 5px 0 0 5px;
+        padding-right: 15rem;
+    }
+
+    .newsletter button {
+        border-radius: 0 5px 5px 0;
+        padding: 1rem 0.75rem;
+        margin: 0;
+    }
+
+    .social {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 3%;
+    }
+
+    .social div:last-child {
+        order: -1;
+    }
+
+    .contact .intro div {
+        padding: 8.75rem 3%;
+    }
+
+    .contact .email {
+        font-size: 1.875rem;
+    }
+    .contact .help {
+        padding: 9rem 3%;
+    }
+
+    .contact .addresss {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 600px;
+    }
+
+    .contact form {
+        padding: 10rem 3%;
+    }
+
+    .contact .form-contact {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .contact .form-contact div {
+        width: 48%;
+    }
+
+    .check {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .checkboxes {
+        padding-right: 2rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1190px) {
+    .nav-toggle { 
+        display: none;
+    } 
+    
+    header nav { 
+        display: flex;
+        align-items: center;
+        overflow: visible;
+        max-height: 100vh;
+        width: unset;
+        position: static;
+    }
+    
+    header input {
+        margin: 0 0.75rem 1rem 0.75rem;
+    }
+    
+    .show-nav {
+        max-height: 0;
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1190px;
+        margin: auto;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+    }
+
+    .menu li {
+        border: none;
+        padding-top: 0;
+    }
+
+    .menu li:first-of-type {
+        padding-top: 0;
+    }
+
+    .menu a {
+        font-size: 1.125rem;
+    }
+
+    .index .intro div {
+        max-width: 1190px;
+        margin: auto;
+    }
+
+    .work-intro {
+        max-width: 1190px;
+        margin: auto;
+    }
+
+    .img-tiles {
+        width: 1190px;
+        margin: auto;
+        overflow: unset;
+    }
+
+    .view-work {
+        max-width: 1190px;
+        margin: auto;
+    }
+
+    .services {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1190px;
+        margin: auto;
+    }
+    
+    .services >div {
+        width: 45%;
+    }
+
+    .services-img >div {
+        width: 45%;
+    }
+
+    .four-tile {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .four-tile >div {
+        width: 50%;
+    }
+
+    .four-tile-img {
+        height: 927px;
+        order: -1;
+    }
+
+    .who div {
+        max-width: 620px;
+    }
+
+    .learn {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 12rem;
+        padding-right: 6rem;
+    }
+
+    .experience {
+        display: inline;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        max-width: 640px;
+    }
+
+    .experience-img {
+        height: 225px;
+        margin-bottom: 2rem;
+    }
+
+    .footer-nav {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1190px;
+        margin: auto;
+    }
+
+    .address {
+        padding-right: 3rem;
+    }
+
+    .newsletter {
+        padding-left: 2rem;
+        width: 45%;
+    }
+
+    .newsletter input {
+        padding-right: 4rem;
+    }
+
+    .social {
+        max-width: 1190px;
+        margin: auto;
+    }
+
+    .contact .help {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8rem 3%;
+        max-width: 1190px;
+        margin: auto;
+    }
+
+    .contact .help div  {
+        width: 100%;
+    }
+    
+    .contact .help p {
+        max-width: 485px;
+    }
+
+    .contact .address {
+        padding-right: 0;
+    }
+    
+    .parallax-image div {
+        max-width: 1190px;
+        margin: auto;
+    }
+
+    form {
+        max-width: 1190px;
+        margin: auto;
+    }
+}
